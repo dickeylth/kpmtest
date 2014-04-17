@@ -32,4 +32,3 @@ KISSY.add(function (S, Node,Base) {
 }, {requires:['node', 'base']});
 
 
-
