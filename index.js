@@ -6,6 +6,10 @@
 KISSY.add(function (S, Node,Base) {
     var EMPTY = '';
     var $ = Node.all;
+
+    var updated = '11';
+
+
     /**
      * 
      * @class Kpmtest
