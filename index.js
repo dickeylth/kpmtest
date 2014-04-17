@@ -22,7 +22,7 @@ KISSY.add(function (S, Node,Base) {
         init: function(){
             var self = this;
             alert('init');
-            console.log(123);
+            console.log(12345);
         }        
 
     }, {ATTRS : /** @lends Kpmtest*/{
