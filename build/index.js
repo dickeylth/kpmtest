@@ -15,7 +15,7 @@ KISSY.add('gallery/kpmtest/src/index',function (S, Node,Base) {
 
     var updated = '1122';
 
-    var lastUpdated = '2014-04-24 17:47:13';
+    var lastUpdated = '2014-04-24 18:43:08';
 
     /**
      * 
