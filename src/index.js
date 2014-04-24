@@ -11,6 +11,7 @@ KISSY.add(function (S, Node,Base) {
 
     var lastUpdated = '2014-04-24 17:47:13';
 
+    var version = '0.4.0';
     /**
      * 
      * @class Kpmtest
