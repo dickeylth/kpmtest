@@ -1,7 +1,7 @@
 /*
 combined files : 
 
-gallery/kpmtest/1.0/index
+gallery/kpmtest/src/index
 
 */
 /**
@@ -9,9 +9,14 @@ gallery/kpmtest/1.0/index
  * @author 弘树<tiehang.lth@alibaba-inc.com>
  * @module kpmtest
  **/
-KISSY.add('gallery/kpmtest/1.0/index',function (S, Node,Base) {
+KISSY.add('gallery/kpmtest/src/index',function (S, Node,Base) {
     var EMPTY = '';
     var $ = Node.all;
+
+    var updated = '1122';
+
+    var lastUpdated = '2014-04-24 15:02:58';
+
     /**
      * 
      * @class Kpmtest
@@ -28,7 +33,7 @@ KISSY.add('gallery/kpmtest/1.0/index',function (S, Node,Base) {
         init: function(){
             var self = this;
             alert('init');
-            console.log(123);
+            console.log(12345);
         }        
 
     }, {ATTRS : /** @lends Kpmtest*/{
@@ -36,7 +41,6 @@ KISSY.add('gallery/kpmtest/1.0/index',function (S, Node,Base) {
     }});
     return Kpmtest;
 }, {requires:['node', 'base']});
-
 
 
 

@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         // 对build目录进行清理
         clean: {
             build: {
-                src: '<%= pkg.version %>/build/*'
+                src: 'build/*'
 			}
         },
         // kmc打包任务，默认情况，入口文件是index.js，可以自行添加入口文件，在files下面
@@ -30,8 +30,10 @@ module.exports = function(grunt) {
             main: {
                 files: [
                     {
-                        src: "<%= pkg.version %>/index.js",
-                        dest: "<%= pkg.version %>/build/index.js"
+                        expand: true,
+                        cwd: 'src/',
+                        src: ['**/*.js'],
+                        dest: 'build/'
                     }
                 ]
             }
@@ -51,9 +53,9 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= pkg.version %>/build',
+                        cwd: 'build',
                         src: ['**/*.js', '!**/*-min.js'],
-                        dest: '<%= pkg.version %>/build',
+                        dest: 'build',
                         ext: '-min.js'
                     }
                 ]
@@ -67,7 +69,7 @@ module.exports = function(grunt) {
 			debug:{
 				options:{
 					proxyport:8080,
-					target:'<%= pkg.version %>/build/',
+					target:'build/',
 					urls:'/s/kissy/gallery/<%= pkg.name %>/<%= pkg.version %>',
 					port:'80',
 					servlet:'?',
@@ -86,13 +88,13 @@ module.exports = function(grunt) {
 				files:[
 					{
 						expand:true,
-						cwd:'<%= pkg.version %>/',
+						cwd:'src',
 						src: [
 							'**/*.css',
 							'!build/**/*.css',
 							'!demo/**/*.css'
 						], 
-						dest: '<%= pkg.version %>/build/', 
+						dest: 'build/', 
 						filter: 'isFile'
 					}
 				]
@@ -102,9 +104,9 @@ module.exports = function(grunt) {
         watch: {
             'all': {
                 files: [
-					'<%= pkg.version %>/**/*.js',
-					'<%= pkg.version %>/src/**/*.css',
-					'!<%= pkg.version %>/build/**/*'
+					'**/*.js',
+					'src/**/*.css',
+					'!build/**/*'
 				],
                 tasks: [ 'build' ]
             }
@@ -114,9 +116,9 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= pkg.version %>/build',
+                        cwd: 'build',
                         src: ['**/*.css', '!**/*-min.css'],
-                        dest: '<%= pkg.version %>/build',
+                        dest: 'build',
                         ext: '-min.css'
                     }
                 ]
