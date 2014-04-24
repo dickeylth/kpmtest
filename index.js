@@ -9,6 +9,7 @@ KISSY.add(function (S, Node,Base) {
 
     var updated = '1122';
 
+    var status = 'changed by 2014-04-24 15:01:19';
 
     /**
      * 
