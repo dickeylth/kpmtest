@@ -2,7 +2,7 @@
     "name": "kpmtest",
     "comName":"Kpmtest",
     "version": "1.0",
-    "desc": "",
+    "desc": "kpm test component",
     "tag":"test",
     "githubName":"dickeylth",
     "author": {
